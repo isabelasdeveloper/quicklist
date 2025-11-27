@@ -4,11 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/path/to/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8afb87ac31.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="/src/scripts/main.js"></script>
-    <title>Template SASS</title>
+    <title>Quicklist</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <h3>teste</h3>
+    <nav class="navbar">
+      <i class="fa-solid fa-arrow-left"></i>
+      <a href="#" id="back-btn">Voltar</a>
+    </nav>
+
+    <section class="container">
+      <h1 class="container-title">Compras da Semana</h1>
+      <form class="container-form">
+        <input
+          type="text"
+          placeholder="Adicione um novo item"
+          class="container-form-input"
+        />
+        <button type="submit" class="container-form-button">
+          Adicionar Item
+        </button>
+      </form>
+    </section>
   </body>
 </html>

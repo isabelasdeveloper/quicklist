@@ -1,0 +1,22 @@
+@mixin font($fs, $fw, $lh) {
+  font-family: variaveis.$font-primary;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
+
+@mixin title() {
+  @include font(1.5rem, 800, 3rem);
+}
+
+@mixin label() {
+  @include font(1rem, 600, 1.25rem);
+}
+
+@mixin paragraph() {
+  @include font(1rem, 500, 1.25rem);
+}
+
+@mixin link() {
+  @include font(0.875rem, 500, 1rem);
+}
