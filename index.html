@@ -12,23 +12,33 @@
     <title>Quicklist</title>
   </head>
   <body>
-    <nav class="navbar">
-      <i class="fa-solid fa-arrow-left"></i>
-      <a href="#" id="back-btn">Voltar</a>
-    </nav>
-
-    <section class="container">
-      <h1 class="container-title">Compras da Semana</h1>
-      <form class="container-form">
-        <input
-          type="text"
-          placeholder="Adicione um novo item"
-          class="container-form-input"
-        />
-        <button type="submit" class="container-form-button">
-          Adicionar Item
-        </button>
-      </form>
-    </section>
+    <main>
+      <nav class="navbar">
+        <i class="fa-solid fa-arrow-left navbar-ico"></i>
+        <a href="#" class="navbar-a">Voltar</a>
+      </nav>
+      <section class="container">
+        <h1 class="container-title">Compras da Semana</h1>
+        <form class="container-form">
+          <input
+            type="text"
+            placeholder="Adicione um novo item"
+            class="container-form-input"
+          />
+          <button type="submit" class="container-form-button">
+            Adicionar Item
+          </button>
+        </form>
+        <ul class="container-list">
+          <li class="list-item">
+            <input type="checkbox" class="list-item-checkbox" />
+            <p class="list-item-text">Pão de Forma</p>
+            <button type="button" class="list-item-btn">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

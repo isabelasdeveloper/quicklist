@@ -1,0 +1,15 @@
+@use "/src/styles/abstract/mixins";
+@use "/src/styles/abstract/variaveis";
+
+.navbar {
+  @include mixins.link();
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: variaveis.$color-brand;
+  &-a {
+    text-decoration: none;
+    color: variaveis.$color-brand;
+    cursor: pointer;
+  }
+}

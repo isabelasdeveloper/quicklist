@@ -1,0 +1,30 @@
+@use "/src/styles/abstract/mixins";
+@use "/src/styles/abstract/variaveis";
+
+.container-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
+
+  .list-item {
+    @include mixins.paragraph();
+    display: flex;
+    padding: 0 12px;
+    justify-content: space-around;
+    background-color: variaveis.$bg-secondary;
+    border-radius: 12px;
+    gap: 12px;
+    &-checkbox {
+      border-radius: 6px;
+      border: 1px solid variaveis.$border-primary;
+      background: variaveis.$bg-secondary;
+    }
+    &-btn {
+      border: none;
+      background: none;
+    }
+  }
+}

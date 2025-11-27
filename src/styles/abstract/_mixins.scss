@@ -1,3 +1,5 @@
+@use "/src/styles/abstract/variaveis";
+
 @mixin font($fs, $fw, $lh) {
   font-family: variaveis.$font-primary;
   font-size: $fs;
@@ -19,4 +21,24 @@
 
 @mixin link() {
   @include font(0.875rem, 500, 1rem);
+}
+
+@mixin btn-primary() {
+  @include label();
+  color: variaveis.$always-white;
+  background-color: variaveis.$color-brand;
+  border: none;
+  height: 44px;
+  padding: 10px 24px;
+  border-radius: 12px;
+}
+
+@mixin input-primary() {
+  @include label();
+  color: variaveis.$content-tertiary;
+  padding: 0 18px;
+  border-radius: 0.75rem;
+  border: 2px solid variaveis.$border-primary;
+  background: variaveis.$bg-secondary;
+  height: 2.75rem;
 }

@@ -1,0 +1,28 @@
+@use "/src/styles/abstract/mixins";
+@use "/src/styles/abstract/variaveis";
+
+.container {
+  &-title {
+    @include mixins.title();
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &-input {
+      @include mixins.input-primary();
+      &:hover {
+        color: variaveis.$content-tertiary;
+        border-color: variaveis.$border-hover;
+      }
+      &:focus {
+        color: variaveis.$content-primary;
+        border-color: variaveis.$color-brand;
+        outline: none;
+      }
+    }
+    &-button {
+      @include mixins.btn-primary();
+    }
+  }
+}

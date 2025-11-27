@@ -1,12 +1,14 @@
-@use "/src/styles/abstract/mixins";
-@use "/src/styles/abstract/variaveis";
+@use "./abstract/variaveis";
+@use "./abstract/mixins";
 
 @use "./components/navbar";
+@use "./components/form";
+@use "./components/list";
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
-  background-color: aqua;
+  background-color: variaveis.$bg-primary;
   display: flex;
   flex-direction: column;
   padding: 2rem;
