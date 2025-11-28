@@ -4,12 +4,30 @@
 .navbar {
   @include mixins.link();
   display: flex;
+  flex-direction: column;
   gap: 0.25rem;
-  align-items: center;
   color: variaveis.$color-brand;
-  &-a {
-    text-decoration: none;
-    color: variaveis.$color-brand;
-    cursor: pointer;
+  &-logo {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    &-p {
+      color: variaveis.$content-secondary;
+      font-family: "Inter";
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+  }
+  &-link {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: start;
+    &-a {
+      text-decoration: none;
+      color: variaveis.$color-brand;
+      cursor: pointer;
+    }
   }
 }

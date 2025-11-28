@@ -12,11 +12,22 @@
     <title>Quicklist</title>
   </head>
   <body>
-    <main>
+    <main class="content">
       <nav class="navbar">
-        <i class="fa-solid fa-arrow-left navbar-ico"></i>
-        <a href="#" class="navbar-a">Voltar</a>
+        <div class="navbar-logo">
+          <img
+            src="/public/images/quicklist-logo.svg"
+            alt="quicklist logo"
+            class="navbar-logo-img"
+          />
+          <p class="navbar-logo-p">quicklist</p>
+        </div>
+        <div class="navbar-link">
+          <i class="fa-solid fa-arrow-left navbar-link-ico"></i>
+          <a href="#" class="navbar-link-a">Voltar</a>
+        </div>
       </nav>
+
       <section class="container">
         <h1 class="container-title">Compras da Semana</h1>
         <form class="container-form">
@@ -24,20 +35,24 @@
             type="text"
             placeholder="Adicione um novo item"
             class="container-form-input"
+            id="input-item"
           />
-          <button type="submit" class="container-form-button">
+          <button type="submit" class="container-form-button" id="btn-add">
             Adicionar Item
           </button>
         </form>
-        <ul class="container-list">
-          <li class="list-item">
-            <input type="checkbox" class="list-item-checkbox" />
-            <p class="list-item-text">Pão de Forma</p>
-            <button type="button" class="list-item-btn">
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          </li>
-        </ul>
+        <ul class="container-list"></ul>
+        <div class="container-alert">
+          <div class="container-alert-msg">
+            <i
+              class="fa-solid fa-circle-exclamation container-alert-msg-ico"
+            ></i>
+            <p class="container-alert-msg-p">O item foi removido da lista.</p>
+          </div>
+          <button type="button" class="container-alert-btn">
+            <i class="fa-solid fa-x container-alert-btn-ico"></i>
+          </button>
+        </div>
       </section>
     </main>
   </body>

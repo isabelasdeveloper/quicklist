@@ -23,6 +23,21 @@
     }
     &-button {
       @include mixins.btn-primary();
+      white-space: nowrap;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .container {
+    width: 40em;
+    &-form {
+      flex-direction: row;
+      justify-content: center;
+      &-input {
+        width: 40em;
+      }
     }
   }
 }

@@ -1,0 +1,35 @@
+@use "/src/styles/abstract/mixins";
+@use "/src/styles/abstract/variaveis";
+
+.container-alert {
+  display: none; //JS - Display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 25px 0 16px 0;
+  background-color: variaveis.$color-danger;
+  padding: 0 12px;
+  border-radius: 12px;
+  &-msg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &-ico {
+      font-size: 20px;
+      flex-shrink: 0;
+      color: variaveis.$always-white;
+    }
+    &-p {
+      @include mixins.label();
+      color: variaveis.$always-white;
+    }
+  }
+  &-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    flex-shrink: 0;
+    color: variaveis.$always-white;
+    cursor: pointer;
+  }
+}
