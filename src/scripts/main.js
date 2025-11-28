@@ -71,6 +71,10 @@ function addItem() {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  addItem();
-  inputItem.value = "";
+  if (inputItem.value === "") {
+    alert("Por favor, insira um item!");
+  } else {
+    addItem();
+    inputItem.value = "";
+  }
 });
