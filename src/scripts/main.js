@@ -52,14 +52,14 @@ function addItem() {
 
   removeButton.addEventListener("click", () => {
     li.remove();
-    alert.style.display = "flex";
+    alert.classList.add("show");
 
     if (alertTimeout) {
       clearTimeout(alertTimeout);
     }
 
     alertTimeout = setTimeout(() => {
-      alert.style.display = "none";
+      alert.classList.remove("show");
     }, 3000);
 
     alertRemove.addEventListener("click", () => {

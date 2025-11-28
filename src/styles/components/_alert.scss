@@ -2,7 +2,7 @@
 @use "/src/styles/abstract/variaveis";
 
 .container-alert {
-  display: none; //JS - Display: flex;
+  display: flex; //JS - Display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
@@ -10,6 +10,14 @@
   background-color: variaveis.$color-danger;
   padding: 0 12px;
   border-radius: 12px;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   &-msg {
     display: flex;
     align-items: center;
